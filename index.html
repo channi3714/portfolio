@@ -6,7 +6,7 @@
   <meta name="description" content="백엔드 개발자 오창엽의 포트폴리오. 프로젝트, 기술, 활동, 수상과 자격증을 소개합니다.">
   <meta name="theme-color" content="#f7f8f7">
   <title>오창엽 | 백엔드 개발자 포트폴리오</title>
-  <link rel="stylesheet" href="home.css?v=4">
+  <link rel="stylesheet" href="home.css?v=5">
 </head>
 <body id="top">
   <a class="skip" href="#main">본문으로 이동</a>
@@ -44,12 +44,17 @@
     </section>
 
     <section class="section" id="skills">
-      <div class="wrap"><div class="section-heading"><p class="eyebrow">02 / SKILLS</p><h2>프로젝트에서 사용한 기술</h2><p>여러 팀 프로젝트에서 활용한 기술을 역할별로 묶었습니다.</p></div>
+      <div class="wrap"><div class="section-heading skills-heading"><p class="eyebrow">02 / SKILLS</p><h2>기술 스택</h2><p>프로젝트에서 직접 사용한 기술과 적용 경험입니다.</p></div>
+        <div class="skill-pills" aria-label="사용 기술">
+          <span><b class="pill-mark java">J</b>Java</span><span><b class="pill-mark spring">S</b>Spring Boot</span><span><b class="pill-mark jpa">JPA</b>Spring Data JPA</span><span><b class="pill-mark python">Py</b>Python</span><span><b class="pill-mark fastapi">F</b>FastAPI</span><span><b class="pill-mark mysql">M</b>MySQL</span><span><b class="pill-mark postgres">P</b>PostgreSQL</span><span><b class="pill-mark docker">D</b>Docker</span><span><b class="pill-mark aws">AWS</b>AWS</span><span><b class="pill-mark git">G</b>Git &amp; GitHub</span>
+        </div>
         <div class="skill-grid">
-          <article class="skill-card"><div class="skill-top"><span>01 / BACKEND</span><b>⌘</b></div><h3>서버와 API</h3><p>주문·신고 등 서비스의 핵심 흐름과 인증 API를 구현했습니다.</p><div class="stack-tags"><span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>REST API</span></div></article>
-          <article class="skill-card"><div class="skill-top"><span>02 / AI SERVICE</span><b>✳</b></div><h3>AI 기능 연동</h3><p>AI 요청을 처리하는 서버와 외부 모델 연동 흐름을 만들었습니다.</p><div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Gemini API</span></div></article>
-          <article class="skill-card"><div class="skill-top"><span>03 / DATA</span><b>▤</b></div><h3>데이터와 파일</h3><p>관계형 데이터를 설계하고 사진·영상 저장 흐름을 다뤘습니다.</p><div class="stack-tags"><span>MySQL</span><span>PostgreSQL</span><span>Amazon S3</span></div></article>
-          <article class="skill-card"><div class="skill-top"><span>04 / INFRA &amp; TOOLS</span><b>◇</b></div><h3>배포와 협업</h3><p>컨테이너 기반 환경을 배포하고 팀과 변경 사항을 검증했습니다.</p><div class="stack-tags"><span>AWS EC2</span><span>Docker Compose</span><span>Git</span><span>GitHub Actions</span></div></article>
+          <article class="skill-card"><div class="skill-top"><span>LANGUAGE</span></div><h3>Java · Python</h3><p>Java로 Spring Boot API를 구현하고, Python으로 AI 분석 서버를 개발했습니다.</p></article>
+          <article class="skill-card"><div class="skill-top"><span>BACKEND</span></div><h3>Spring Boot · FastAPI</h3><p>주문·관리자·신고 처리 API를 만들고, Spring Data JPA로 데이터 접근을 구현했습니다.</p></article>
+          <article class="skill-card"><div class="skill-top"><span>AI SERVICE</span></div><h3>Gemini API · AI 연동</h3><p>사진 분석과 신고서 작성에 외부 AI 모델을 연동하고, 요청 흐름을 FastAPI 서버로 분리했습니다.</p></article>
+          <article class="skill-card"><div class="skill-top"><span>DATABASE &amp; STORAGE</span></div><h3>MySQL · PostgreSQL · S3</h3><p>서비스 데이터 모델을 설계하고, 사진·영상 파일은 Amazon S3에 저장했습니다.</p></article>
+          <article class="skill-card"><div class="skill-top"><span>DEVOPS &amp; INFRA</span></div><h3>AWS · Docker</h3><p>EC2에 Docker Compose로 서비스를 배포하고, CloudFront·RDS·S3를 활용해 운영했습니다.</p></article>
+          <article class="skill-card"><div class="skill-top"><span>TOOLS &amp; COLLABORATION</span></div><h3>Git · GitHub Actions</h3><p>브랜치와 PR로 변경 사항을 관리하고, GitHub Actions를 배포 과정에 사용했습니다.</p></article>
         </div>
       </div>
     </section>
@@ -58,7 +63,7 @@
       <div class="wrap"><div class="section-heading"><p class="eyebrow">03 / PROJECTS</p><h2>Projects</h2><p>동아리와 공모전에서 만든 서비스를 선택해 살펴볼 수 있습니다.</p></div>
         <div class="project-grid">
           <a class="project-card" href="urluv.html" aria-label="URLUV 프로젝트 상세 보기">
-            <div class="project-image"><img src="assets/christmas-template.png" alt="URLUV 크리스마스 템플릿의 마켓 화면" loading="lazy"><span class="image-badge">SERVICE · 2026</span></div>
+            <div class="project-image urluv-project-image"><img src="assets/card-news/cupid/KakaoTalk_Photo_2026-11-25-18-23-50-1.png" alt="기념일 선물을 소개하는 URLUV 큐피드 카드뉴스 첫 장" loading="lazy"><span class="image-badge">SERVICE · 2026</span></div>
             <div class="project-body"><span class="project-type">TEAM PROJECT · ANNIVERSARY SERVICE</span><h3>URLUV <span aria-hidden="true">↗</span></h3><p>사진과 편지 등을 담은 기념일 웹사이트 제작 서비스. 주문 API, 파일 저장, 운영 중 문제 해결과 확장 설계를 기록했습니다.</p><div class="project-tags"><span>Spring Boot</span><span>JPA</span><span>MySQL</span><span>AWS</span></div><span class="project-link">프로젝트 자세히 보기 <b aria-hidden="true">→</b></span></div>
           </a>
           <a class="project-card" href="safewhale.html" aria-label="안전고래 프로젝트 소개 보기">
@@ -80,16 +85,18 @@
       </div></div>
     </div></section>
 
-    <section class="section section-alt" id="achievements"><div class="wrap"><div class="section-heading"><p class="eyebrow">05 / ACHIEVEMENTS</p><h2>수상 및 자격증</h2><p>아이디어를 구현하고 발표하며 얻은 결과입니다. 본선 진출은 수상과 구분했습니다.</p></div>
+    <section class="section section-alt" id="achievements"><div class="wrap"><div class="section-heading"><p class="eyebrow">05 / AWARDS</p><h2>수상</h2><p>아이디어를 구현하고 발표하며 얻은 결과입니다. 본선 진출은 수상과 구분했습니다.</p></div>
       <h3 class="achievement-subtitle">Awards &amp; Recognition</h3><div class="achievement-grid">
         <article class="achievement-card"><span>2026.11.16 · 본선 진출</span><h3>청년취업사관학교 해커톤</h3><p>주최: 서울특별시 · 서울경제진흥원</p></article>
         <article class="achievement-card"><span>2026.09.28 · 장려상</span><h3>서강대학교 생성형 AI 기반 아이디어 공모전</h3><p>안전고래 · 자동 안전 신고 시스템</p><small>주최: 서강대학교 디지털정보처</small></article>
         <article class="achievement-card"><span>2024.06.13 · 장려상</span><h3>공군창업경진대회</h3><p>주최: 창업진흥원 · 대한민국공군</p></article>
         <article class="achievement-card"><span>2022.11.04 · 은상</span><h3>글로벌 인디 게임제작 경진대회</h3><p>주최: 한국콘텐츠진흥원 · 한국게임개발자협회</p></article>
-      </div><div class="certification-row"><span>CERTIFICATION · 2024.06.21</span><strong>SQLD · SQL 개발자</strong></div>
+      </div>
     </div></section>
 
-    <section class="closing wrap" id="contact"><p class="eyebrow">06 / CONTACT</p><h2>함께 서비스를 만들 이야기를<br>나누고 싶습니다.</h2><p>프로젝트와 협업에 관한 연락은 이메일로 보내주세요.</p><div class="hero-actions"><a class="button button-dark" href="mailto:chyeop.oh@gmail.com">chyeop.oh@gmail.com <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button button-light" href="https://velog.io/@channi3714/posts" target="_blank" rel="noopener noreferrer">Velog ↗</a></div></section>
+    <section class="section" id="certifications"><div class="wrap"><div class="section-heading"><p class="eyebrow">06 / CERTIFICATIONS</p><h2>자격증</h2><p>취득한 자격증을 정리했습니다.</p></div><div class="certification-grid"><article class="certification-card"><span>2024.06.21</span><h3>SQLD</h3><p>SQL 개발자</p></article></div></div></section>
+
+    <section class="closing wrap" id="contact"><p class="eyebrow">07 / CONTACT</p><h2>함께 서비스를 만들 이야기를<br>나누고 싶습니다.</h2><p>프로젝트와 협업에 관한 연락은 이메일로 보내주세요.</p><div class="hero-actions"><a class="button button-dark" href="mailto:chyeop.oh@gmail.com">chyeop.oh@gmail.com <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button button-light" href="https://velog.io/@channi3714/posts" target="_blank" rel="noopener noreferrer">Velog ↗</a></div></section>
   </main>
 
   <footer><div class="wrap footer-inner"><span>© 2026 OH CHANGYEOP · BACKEND DEVELOPER</span><a href="#top">맨 위로 ↑</a></div></footer>

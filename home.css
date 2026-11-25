@@ -23,3 +23,26 @@
 #skills .section-heading{margin-bottom:32px}.skill-grid{gap:18px}.skill-card{position:relative;min-height:248px;padding:29px;border-color:#dae8e6;box-shadow:0 8px 26px #173b390a}.skill-card:before{content:'';position:absolute;left:0;top:26px;bottom:26px;width:3px;border-radius:3px;background:#5aa89e}.skill-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.skill-top span{font:500 11px 'DM Mono',monospace;letter-spacing:.12em;color:var(--teal)}.skill-top b{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:#3b8a80;background:#eaf5f1;font-size:21px}.skill-card h3{margin:15px 0 8px;font-size:23px}.skill-card p{font-size:14px;min-height:48px}.stack-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:21px}.stack-tags span{font:500 11px 'DM Mono',monospace;background:#eff6f3;border:1px solid #deebe6;color:#345d58;padding:6px 9px;border-radius:6px}
 @media(max-width:900px){.hero-band .hero{grid-template-columns:190px minmax(0,1fr);gap:35px}.profile-circle{width:180px;height:180px}.hero-band .hero-copy h1{font-size:68px}.hero-band .hero-lead{font-size:15px}}
 @media(max-width:650px){.hero-band .hero{grid-template-columns:1fr;gap:28px;padding-block:58px;text-align:center}.hero-identity{gap:16px}.profile-circle{width:180px;height:180px}.identity-links a{width:46px;height:46px;font-size:15px}.hero-band .hero-copy h1{font-size:60px}.hero-role{font-size:21px}.hero-keywords{font-size:11px;line-height:1.6}.hero-band .hero-lead{font-size:15px}.hero-band .hero-actions{justify-content:center}.hero-band .hero-actions .button{min-height:44px;padding:8px 13px;font-size:12px}.skill-card{min-height:0}.skill-card p{min-height:0}}
+
+/* Skill overview: compact technology chips above experience cards. */
+.skills-heading{text-align:center}
+.skill-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 40px;max-width:1050px}
+.skill-pills>span{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid #cfe0db;border-radius:9px;background:#f9fcfa;color:var(--ink);font:700 13px 'DM Sans','Nanum Gothic',sans-serif;white-space:nowrap}
+.pill-mark{width:25px;height:25px;display:inline-grid;place-items:center;border-radius:6px;background:#e9f2ee;color:var(--teal);font:800 12px 'DM Sans',sans-serif;letter-spacing:-.05em}
+.pill-mark.java{color:#c56542}.pill-mark.spring,.pill-mark.jpa{color:#498a42}.pill-mark.python{color:#326ea3}.pill-mark.fastapi{color:#16876f}.pill-mark.mysql{color:#386a9b}.pill-mark.postgres{color:#4a649e}.pill-mark.docker{color:#2974ad}.pill-mark.aws{color:#bb6a25;font-size:9px}.pill-mark.git{color:#c85d43}
+#skills .skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#skills .skill-card{min-height:205px;padding:27px 27px 24px;background:#fff;box-shadow:none}
+#skills .skill-card:before{display:none}
+#skills .skill-card h3{margin:18px 0 10px;font-size:19px;line-height:1.35}
+#skills .skill-card p{min-height:0;font-size:13px;line-height:1.75}
+.urluv-project-image{background:#f7e6ee}
+.urluv-project-image::before{content:'';position:absolute;inset:-20px;background:url('assets/card-news/cupid/KakaoTalk_Photo_2026-11-25-18-23-50-1.png') center 42%/cover;filter:blur(22px);opacity:.38}
+.urluv-project-image img{object-fit:contain;object-position:center;z-index:1}
+.urluv-project-image .image-badge{z-index:2}
+.certification-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.certification-card{border:1px solid var(--line);border-radius:13px;background:#fff;padding:25px;min-height:156px}
+.certification-card>span{font:11px 'DM Mono',monospace;color:var(--teal)}
+.certification-card h3{font-size:22px;margin:15px 0 1px;letter-spacing:-.04em}
+.certification-card p{color:var(--muted);font-size:13px;margin:0}
+@media(max-width:900px){#skills .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.skill-pills{justify-content:flex-start;gap:7px;margin-bottom:26px}.skill-pills>span{font-size:12px;padding:7px 9px}#skills .skill-grid,.certification-grid{grid-template-columns:1fr}#skills .skill-card{min-height:0;padding:23px}}
