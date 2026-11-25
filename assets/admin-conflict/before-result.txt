@@ -1,0 +1,11 @@
+BEFORE — Docker/JUnit isolated test
+Test: two admins read the same order version; A confirms payment, B cancels from stale screen
+Environment: Spring Boot integration test, H2 in memory inside Docker; no local MySQL data changed
+A POST /payment/confirm -> HTTP 200
+B POST /status CANCELED -> HTTP 200
+Final order status -> CANCELED
+JUnit: 1 test, 0 failures, 0 errors
+
+Raw MockMvc response excerpts:
+Response 1: Status = 200
+Response 2: Status = 200

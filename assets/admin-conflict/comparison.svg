@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">같은 주문을 두 운영자가 수정할 때: 버전 검사 비교 실험</title>
+<desc id="desc">버전 검사 제외 실험은 요청 둘 다 200, 최종 상태 CANCELED. 현재 코드는 두 번째 요청 409 ORDER_CONFLICT, 최종 상태 IN_PROGRESS.</desc>
+<rect width="1200" height="640" fill="#f5f9f7"/>
+<text x="60" y="80" font-size="36" font-weight="800" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172a32">오래된 관리자 화면에서 보낸 요청은 어떻게 처리될까?</text>
+<text x="60" y="118" font-size="17" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">같은 버전을 본 A · B  |  A 입금 확인 → B 취소  |  Docker 안의 H2 통합 테스트</text>
+<rect x="58" y="157" width="525" height="364" rx="18" fill="#fff" stroke="#d7e5e2" stroke-width="2"/>
+<rect x="617" y="157" width="525" height="364" rx="18" fill="#fff" stroke="#b6d8cf" stroke-width="2"/>
+<rect x="78" y="177" width="178" height="34" rx="17" fill="#fce8df"/>
+<text x="97" y="200" font-size="16" font-weight="800" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#9b4b2e">비교 실험 · 버전 검사 제외</text>
+<rect x="637" y="177" width="155" height="34" rx="17" fill="#dff4ec"/>
+<text x="656" y="200" font-size="16" font-weight="800" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#1a6b56">현재 코드 · 버전 검사</text>
+<text x="88" y="258" font-size="22" font-weight="700" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172a32">A  입금 확인</text>
+<text x="448" y="258" font-size="22" font-weight="800" font-family="Arial, sans-serif" fill="#1a6b56">200</text>
+<text x="88" y="321" font-size="22" font-weight="700" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172a32">B  오래된 화면에서 취소</text>
+<text x="448" y="321" font-size="22" font-weight="800" font-family="Arial, sans-serif" fill="#9b4b2e">200</text>
+<line x1="88" y1="350" x2="553" y2="350" stroke="#d7e5e2"/>
+<text x="88" y="391" font-size="17" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">최종 주문 상태</text>
+<text x="88" y="438" font-size="32" font-weight="800" font-family="Arial, sans-serif" fill="#9b4b2e">CANCELED</text>
+<text x="88" y="481" font-size="15" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">A의 처리 후에도 B의 취소가 반영됨</text>
+<text x="647" y="258" font-size="22" font-weight="700" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172a32">A  입금 확인</text>
+<text x="1007" y="258" font-size="22" font-weight="800" font-family="Arial, sans-serif" fill="#1a6b56">200</text>
+<text x="647" y="321" font-size="22" font-weight="700" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172a32">B  오래된 화면에서 취소</text>
+<text x="1007" y="321" font-size="22" font-weight="800" font-family="Arial, sans-serif" fill="#1a6b56">409</text>
+<line x1="647" y1="350" x2="1112" y2="350" stroke="#d7e5e2"/>
+<text x="647" y="391" font-size="17" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">최종 주문 상태</text>
+<text x="647" y="438" font-size="32" font-weight="800" font-family="Arial, sans-serif" fill="#1a6b56">IN_PROGRESS</text>
+<text x="647" y="481" font-size="15" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">ORDER_CONFLICT · A의 변경이 유지됨</text>
+<text x="60" y="565" font-size="15" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">두 실험 모두 JUnit 1건 통과 · 순차 요청으로 오래된 화면을 재현 · 실제 동시 부하 테스트는 아님</text>
+<text x="60" y="594" font-size="14" font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#587078">왼쪽은 과거 운영 버전이 아니라 현재 코드에서 checkVersion 호출만 제거한 통제 실험입니다.</text>
+</svg>
