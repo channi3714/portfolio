@@ -46,3 +46,4 @@
 .certification-card p{color:var(--muted);font-size:13px;margin:0}
 @media(max-width:900px){#skills .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.skill-pills{justify-content:flex-start;gap:7px;margin-bottom:26px}.skill-pills>span{font-size:12px;padding:7px 9px}#skills .skill-grid,.certification-grid{grid-template-columns:1fr}#skills .skill-card{min-height:0;padding:23px}}
+.project-image.whale-image{background:#f1e8e2}.project-image.whale-image::before,.project-image.whale-image::after{display:none}.project-image.whale-image img{object-position:center}
