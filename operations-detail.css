@@ -11,6 +11,5 @@
 .ops-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:23px}
 .ops-columns>div{border:1px solid var(--line);border-radius:12px;padding:24px;background:white}
 .ops-columns h4{font-size:18px;margin:0 0 10px;letter-spacing:-.035em}
-.ops-section .ops-note{margin-top:19px;font-size:13px;color:#607674}
 @media(max-width:900px){.deploy-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.architecture-story,.ops-columns,.deploy-steps{grid-template-columns:1fr}.architecture-story{gap:25px}.ops-section{margin-top:42px}.deploy-steps li{min-height:0}}
