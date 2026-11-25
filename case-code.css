@@ -1,0 +1,8 @@
+.code-story{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:34px;padding:28px;background:#1d3a40;border:1px solid #496368;border-radius:12px}
+.code-label{font:11px 'DM Mono',monospace;color:#83d8c1;letter-spacing:.08em}
+.code-story h4{font-size:18px;margin:8px 0}
+.code-story p{font-size:14px;color:#c1d2d1;margin:0 0 11px}
+.code-story a{font-size:13px;color:#9ee8d4;text-decoration:underline;text-underline-offset:4px}
+.code-story pre{margin:0;padding:20px;max-width:100%;overflow:auto;background:#0c2228;border-radius:8px;color:#d7f5ed;font:12px/1.75 'DM Mono',monospace}
+.code-story code{font-family:'DM Mono',monospace}
+@media(max-width:750px){.code-story{grid-template-columns:1fr;padding:20px}.code-story pre{font-size:11px}}

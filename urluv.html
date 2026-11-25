@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="URLUV 기념일 사이트 서비스의 백엔드 개발과 운영 기록">
+  <title>URLUV | 프로젝트 포트폴리오</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="case-code.css">
+  <link rel="stylesheet" href="diagram-images.css">
+  <link rel="stylesheet" href="screenshots.css">
+  <link rel="stylesheet" href="before-after.css">
+  <link rel="stylesheet" href="case-detail.css">
+  <link rel="stylesheet" href="product-context.css">
+  <link rel="stylesheet" href="card-news.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">URLUV<span class="brand-dot">.</span><small>PROJECT NOTE · 포트폴리오 홈으로</small></a>
+      <nav aria-label="주요 메뉴"><a href="index.html">← 포트폴리오</a><a href="#overview">소개</a><a href="#architecture">구조</a><a href="#cases">문제 해결</a><a href="#operation">운영</a><a href="#next">확장 계획</a></nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" type="button">메뉴</button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="모바일 메뉴" hidden><a href="index.html">← 포트폴리오</a><a href="#overview">소개</a><a href="#architecture">구조</a><a href="#cases">문제 해결</a><a href="#operation">운영</a><a href="#next">확장 계획</a></nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero wrap">
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> BACKEND · SERVICE OPERATIONS</div>
+        <h1>주문 한 건이<br><em>하나의 기념일 사이트</em>가 되기까지.</h1>
+        <p>URLUV는 고객이 사진, 편지, 음악을 담아 개인 기념일 사이트를 주문하는 서비스입니다. 실제 이용자의 불편을 해결하고, 주문부터 납품까지 이어지는 흐름을 운영하며 배운 것을 기록했습니다.</p>
+        <div class="hero-actions"><a class="button primary" href="#cases">문제 해결 과정 보기</a><a class="button subtle" href="#architecture">시스템 구조 보기</a></div>
+        <div class="hero-meta"><span>기념일 콘텐츠 주문 서비스</span><span>팀 프로젝트 · 운영 중</span><span>백엔드 · 배포 인프라</span></div>
+      </div>
+      <div class="hero-visual" aria-label="URLUV 주문과 사이트 제작 흐름"><div class="visual-grid"></div><div class="mini-card order"><span class="window-controls">● ● ●</span><b>01 / 주문서</b><p>이름과 수령일을 입력하고<br>사이트 콘텐츠를 채웁니다.</p><div class="mini-line"></div><div class="mini-line short"></div></div><div class="flow-line"></div><div class="mini-card site"><span class="window-controls">● ● ●</span><b>02 / 기념일 사이트</b><div class="site-preview"><span>♥</span><strong>OUR DAY</strong><small>사진 · 편지 · 음악</small></div></div><div class="visual-caption">ORDER → CONTENT → DELIVERY</div></div>
+    </section>
+
+    <section id="overview" class="section pale"><div class="wrap"><div class="section-head"><span class="kicker">01 / OVERVIEW</span><h2>서비스와 담당 범위</h2><p>서비스 전체 맥락을 먼저 보여주고, 제가 직접 다룬 영역을 구분했습니다.</p></div>
+      <div class="overview-grid"><article class="panel"><h3>서비스 흐름</h3><ol class="timeline"><li><b>주문 작성</b><span>템플릿을 고르고 수령일과 콘텐츠를 입력</span></li><li><b>입금 확인·제작</b><span>운영자가 결제를 확인하고 사이트를 준비</span></li><li><b>사이트 전달</b><span>고유 링크를 문자로 전달하고 콘텐츠를 함께 사용</span></li></ol></article><article class="panel"><h3>내가 맡은 일</h3><ul class="clean-list"><li>Spring Boot 주문·운영자 API와 데이터 모델</li><li>사진·영상 저장과 사이트 데이터 전달 흐름</li><li>운영 배포, 로그 확인, 장애 원인 조사</li><li>다중 서버 운영을 위한 공유 상태 설계·구현</li></ul><p class="fine">팀 공동 작업과 본인 기여 범위는 최종 제출 전 다시 확인해 주세요.</p></article></div>
+      <div class="product-context"><div><span class="kicker">WHY URLUV</span><h3>그날의 마음을 전하고,<br>이후에도 다시 꺼내볼 수 있는 선물</h3><p>팀은 기념일 선물이 전달되는 순간을 넘어, 연인이나 가족이 함께한 사진·영상·편지를 다시 열어보는 경험이 될 수 있을지 고민했습니다. URLUV는 이 콘텐츠를 개인별 웹사이트에 담아 링크로 전하는 방식으로 답했습니다.</p></div><div class="early-results"><span class="kicker">EARLY VALIDATION</span><strong>유료 고객 11명</strong><p>11.08–11.20 발표 자료 기준 · 누적 매출 약 2.7만 원</p><p>초기 구매 고객 5명을 인터뷰해 개인화된 선물, 비대면 공유, 다시 꺼내볼 수 있는 경험을 구매 이유로 확인했습니다.</p></div></div>
+      <div class="showcase"><div class="showcase-heading"><span class="kicker">PRODUCT FLOW</span><h3>주문에서 기념일 사이트로</h3><p>고객이 템플릿을 고르고 콘텐츠를 입력하면, 선택한 분위기의 사이트로 이어집니다.</p></div><figure class="showcase-order"><a href="assets/order-template-selection.png" target="_blank" aria-label="주문 화면 원본 이미지 열기"><img src="assets/order-template-selection.png" alt="URLUV 주문 화면에서 일반, 빼빼로, 크리스마스 템플릿을 선택하는 모습"></a><figcaption><strong>01 · 주문 화면</strong><span>템플릿을 선택하고 기념일 정보를 입력</span></figcaption></figure><div class="showcase-templates"><figure><a href="assets/christmas-template.png" target="_blank" aria-label="크리스마스 템플릿 원본 이미지 열기"><img src="assets/christmas-template.png" alt="크리스마스 마켓에서 캐릭터가 움직이고 사진관과 음악 창이 열려 있는 템플릿"></a><figcaption><strong>02 · 크리스마스 템플릿</strong><span>마켓을 돌아다니며 추억을 여는 공간</span></figcaption></figure><figure><a href="assets/cupid-template.png" target="_blank" aria-label="큐피드 템플릿 원본 이미지 열기"><img src="assets/cupid-template.png" alt="분홍색 데스크톱 배경에 사진 폴더와 메모 창이 열린 큐피드 기본 템플릿"></a><figcaption><strong>03 · 큐피드 기본 템플릿</strong><span>사진과 편지를 폴더처럼 열어보는 공간</span></figcaption></figure></div></div>
+    </div></section>
+
+    <section id="promotion" class="section promotion"><div class="wrap"><div class="section-head"><span class="kicker">SERVICE IN THE WILD</span><h2>서비스를 소개한 카드뉴스</h2><p>팀이 인스타그램 홍보에 사용한 콘텐츠입니다. 템플릿별로 고르고 옆으로 넘겨볼 수 있습니다.</p></div><div class="news-gallery"><div class="news-tabs" role="tablist" aria-label="카드뉴스 종류"><button type="button" role="tab" aria-selected="true" data-series="cupid">큐피드</button><button type="button" role="tab" aria-selected="false" data-series="pepero">빼빼로</button><button type="button" role="tab" aria-selected="false" data-series="christmas">크리스마스</button></div><div class="news-viewer" role="region" aria-label="카드뉴스 슬라이드" tabindex="0"><button type="button" class="news-arrow prev" aria-label="이전 카드">‹</button><a class="news-image-link" href="assets/card-news/cupid/KakaoTalk_Photo_2026-11-25-18-23-50-1.png" target="_blank" aria-label="카드뉴스 원본 이미지 열기"><img class="news-image" src="assets/card-news/cupid/KakaoTalk_Photo_2026-11-25-18-23-50-1.png" alt="큐피드 카드뉴스 1장"></a><button type="button" class="news-arrow next" aria-label="다음 카드">›</button></div><div class="news-footer"><span class="news-counter" aria-live="polite">1 / 6</span><span>화살표 또는 좌우 밀기로 이동 · 이미지를 누르면 크게 열립니다</span></div></div></div></section>
+
+    <section id="architecture" class="section"><div class="wrap"><div class="section-head"><span class="kicker">02 / ARCHITECTURE</span><h2>현재 운영 구조</h2><p>주문 화면, API, 데이터 저장소, 고객 사이트가 어떻게 연결되는지 요약했습니다.</p></div>
+      <div class="architecture-card"><div class="architecture-chain"><div><small>사용자</small><b>주문 · 사이트 방문</b></div><i>→</i><div><small>웹 프론트</small><b>주문서 · 템플릿</b></div><i>→</i><div><small>API</small><b>CloudFront · EC2</b></div><i>→</i><div><small>데이터</small><b>RDS · S3</b></div></div><p>주문 내용은 MySQL에, 사진과 영상은 S3에 저장합니다. 운영자는 별도 관리자 화면에서 입금과 제작 상태를 처리합니다. 현재 API 서버는 단일 EC2입니다.</p><a class="text-link" href="assets/architecture/URLUV-current-architecture.drawio">편집 가능한 현재 구조도 보기</a></div>
+      <figure class="media-slot has-image"><img src="assets/current-architecture.png" alt="URLUV 현재 운영 인프라 구조도"><figcaption>현재 운영 구조 · 단일 EC2</figcaption></figure>
+      <div class="two-cols"><div class="detail-block"><span>DATA FLOW</span><h3>초안부터 납품까지</h3><p>작성 중인 주문서는 초안 상태로 저장됩니다. 제출 후 주문 상태가 바뀌고, 운영자가 입금을 확인한 뒤 사이트를 전달합니다. 상태 변경과 문자 처리 이력은 관리자 기록에 남습니다.</p></div><div class="detail-block"><span>TECH STACK</span><h3>구현에 사용한 기술</h3><p>Java · Spring Boot · JPA · MySQL · Docker · AWS EC2 · RDS · S3 · CloudFront · Vercel</p></div></div>
+    </div></section>
+
+    <section id="cases" class="section ink"><div class="wrap"><div class="section-head"><span class="kicker">03 / PROBLEM SOLVING</span><h2>문제 해결과 운영 위험 대비</h2><p>확인한 사실, 원인 가설, 코드 변경, 검증 범위를 나눠 기록했습니다.</p></div>
+      <article class="case"><div class="case-top"><span class="case-no">CASE 01</span><h3>로그에는 오류가 없었지만, 사진 미리보기가 깨졌다</h3></div><div class="case-grid"><div><h4>현상</h4><p>카카오톡 브라우저에서 사진 미리보기가 일부 기기에서 깨진다는 제보가 있었습니다. 같은 시간대의 CloudFront 로그에서는 뚜렷한 오류가 보이지 않았습니다.</p></div><div><h4>가설과 조치</h4><p>기기별 이미지 처리 여건 차이를 원인 후보로 보고, 서버에 저장하는 사진의 긴 변을 최대 1600px로 줄였습니다. 로그 상태와 사용자 화면의 현상을 구분해 판단했습니다.</p></div><div><h4>확인한 결과</h4><p>제보된 문제는 변경 후 해결됐습니다. 기기 메모리가 단일 원인이었다고 단정하지 않고, 같은 유형의 문의가 다시 생기는지 운영 중 확인합니다.</p></div></div><div class="code-story"><div><span class="code-label">CODE CHANGE · PhotoFiles.java</span><h4>업로드할 때 사진 크기를 제한</h4><p>업로드 서비스가 사진을 저장하기 전에 <code>PhotoFiles.prepare()</code>를 호출합니다. 파일 앞부분으로 형식을 판별하고 HEIC를 JPG로 바꾼 뒤, <code>vipsthumbnail</code>로 긴 변을 설정값 이하로 줄입니다. 변환 실패 시 원본을 저장하고 경고 로그를 남깁니다.</p><a href="https://github.com/anniversary-site/anniversary-site/blob/backend/src/main/java/urluv/order/service/draft/PhotoFiles.java" target="_blank" rel="noopener noreferrer">원본 코드 보기</a></div><pre><code>photo-max-px: ${PHOTO_MAX_PX:1600}
+
+// PhotoFiles.shrink()의 크기 제한 인자
+"--size", maxPx + "x" + maxPx + ">"
+
+// DraftMediaService.upload()
+PhotoFiles.Photo p = photos.prepare(file);</code></pre></div><div class="case-detail"><h4>왜 서버 응답만 확인해서는 찾기 어려웠나</h4><p>CloudFront 로그에서 뚜렷한 오류가 없었다는 것은 파일 요청이 실패했다는 증거가 없다는 뜻이었습니다. 화면에서는 이미지가 물음표로 보였고, 기기마다 현상이 달랐습니다. 팀은 전송 이후 브라우저가 원본 사진 여러 장을 디코딩하고 그리는 과정도 확인해야 한다고 판단했습니다. 휴대폰 원본 사진은 압축 파일 크기보다 화면에 펼쳐질 때의 메모리 사용량이 훨씬 클 수 있습니다. 다만 당시 기기 메모리를 직접 측정한 것은 아니므로 이를 확정 원인으로 적지 않았습니다.</p><h4>어떻게 변경했나</h4><p>사진 업로드 흐름에서 저장 직전에 <code>PhotoFiles.prepare()</code>를 거치도록 했습니다. 긴 변이 설정값보다 큰 사진은 <code>vipsthumbnail</code>로 최대 1600px까지 줄입니다. 회전 정보에 맞춰 이미지를 처리하고 색 정보는 유지하며, 위치 정보 등 다른 메타데이터는 제거합니다. 변환을 동시에 두 장까지만 허용해 서버 메모리 부담도 제한합니다. 도구 실행에 실패하면 업로드 자체를 중단하지 않고 원본을 저장하도록 했기 때문에, 그 경우 큰 이미지가 남을 수 있다는 한계가 있습니다.</p><h4>어디까지 검증했나</h4><p>변경 후 제보됐던 화면에서 사진이 표시되는 것을 확인했습니다. 아래 전후 화면은 기기와 촬영 시점이 달라 엄밀한 성능 비교 자료는 아닙니다. 이 사례의 결론은 ‘이미지 크기 제한 후 사용자에게 보고된 표시 문제가 해결됐다’는 것이고, 카카오톡 브라우저의 내부 실패 원인을 단정한 것은 아닙니다.</p></div><div class="before-after"><figure><span class="comparison-label">BEFORE · 사진 표시 실패</span><a href="assets/preview-before.jpeg" target="_blank" aria-label="수정 전 화면 크게 보기"><img src="assets/preview-before.jpeg" alt="수정 전 카카오톡 브라우저에서 사진 여러 장이 물음표 아이콘으로 표시된 화면"></a><figcaption>사진 영역에 물음표 아이콘이 표시됨</figcaption></figure><figure><span class="comparison-label after">AFTER · 사진 표시 확인</span><a href="assets/preview-after.png" target="_blank" aria-label="수정 후 화면 크게 보기"><img src="assets/preview-after.png" alt="수정 후 카카오톡 브라우저의 관리자 미리보기에서 사진들이 보이는 화면"></a><figcaption>관리자 미리보기에서 사진이 표시됨</figcaption></figure></div></article>
+      <article class="case"><div class="case-top"><span class="case-no">CASE 02 · 예방 설계</span><h3>두 운영자가 같은 주문을 수정할 때</h3></div><div class="case-grid"><div><h4>위험</h4><p>입금 확인과 납품 상태를 여러 운영자가 다루면, 오래된 화면에서 보낸 요청이 최신 상태를 덮어쓸 수 있습니다.</p></div><div><h4>설계</h4><p>주문 버전을 요청에 함께 보내도록 했습니다. 그사이 주문이 바뀌었다면 서버가 409 충돌을 반환하고 최신 내용을 다시 읽게 합니다.</p></div><div><h4>검증 범위</h4><p>두 운영자가 같은 버전을 본 상황을 순차 요청으로 재현한 통합 테스트에서 첫 요청은 성공하고 두 번째 요청은 <code>ORDER_CONFLICT</code>로 거절됩니다. 실제 동시 요청 부하 테스트나 운영 장애 해결 사례로 제시하지는 않습니다.</p></div></div><div class="code-story"><div><span class="code-label">CODE CHANGE · Order / AdminOrderService</span><h4>화면에서 본 버전과 현재 버전을 비교</h4><p>주문 엔티티의 <code>@Version</code>으로 변경 때마다 버전을 올립니다. 관리자 화면은 마지막으로 본 버전을 <code>expectedVersion</code>으로 전송합니다. 서버는 처리 전에 비교하고, 충돌하면 화면이 주문 상세를 다시 조회합니다. 문자·기록보다 주문 업데이트를 먼저 반영하도록 순서도 정리했습니다.</p><a href="https://github.com/anniversary-site/anniversary-site/blob/backend/src/main/java/urluv/order/service/admin/AdminOrderService.java" target="_blank" rel="noopener noreferrer">서버 코드 보기</a></div><pre><code>@Version private long version;
+
+if (o.getVersion() != expectedVersion)
+    throw new ApiException(ErrorCode.ORDER_CONFLICT);
+
+o.confirmPayment(now);
+orders.saveAndFlush(o);
+notifications.record(o, Notification.Type.PAID, paidMessage(o));</code></pre></div><div class="case-detail"><h4>어떤 상황을 막고 싶었나</h4><p>운영자 A와 B가 같은 주문 상세를 열면 둘 다 같은 상태를 보게 됩니다. A가 입금을 확인한 직후 B가 이전 화면에서 취소 또는 납품을 처리하면, B의 요청은 이미 바뀐 주문을 기준으로 판단해야 합니다. 화면에서 버튼을 비활성화하는 것만으로는 다른 브라우저의 변경을 알 수 없으므로, 서버와 데이터베이스에서 충돌을 판정하도록 설계했습니다.</p><h4>서버와 화면을 어떻게 연결했나</h4><p><code>Order</code>의 <code>@Version</code> 값과 관리자 화면이 전달한 <code>expectedVersion</code>을 먼저 비교합니다. 화면이 오래된 경우 <code>ORDER_CONFLICT</code>를 반환합니다. 거의 같은 순간에 요청이 도착해 서비스의 사전 비교를 모두 통과하더라도, JPA 낙관적 락과 동시성 예외 처리로 한쪽 변경을 거절하도록 했습니다. 프론트엔드는 충돌 응답을 받으면 진행 중인 동작을 닫고 주문 상세를 다시 불러옵니다.</p><h4>저장 순서와 검증 범위</h4><p>입금 확인에서는 주문 상태를 바꾼 뒤 <code>saveAndFlush()</code>로 주문 행의 업데이트를 먼저 실행하고, 그다음 안내 문자와 감사 기록을 저장합니다. 코드에는 문자·기록 행이 주문을 참조하면서 잠금 순서가 엇갈릴 수 있다는 이유가 남아 있습니다. 통합 테스트는 동일한 구버전을 가진 두 요청을 순서대로 보내 두 번째가 409로 거절되고 첫 번째 상태가 유지되는지 확인합니다. 실제 동시 부하에서 데드락 발생률을 측정한 결과는 아직 없으므로, 이 사례는 예방 설계와 테스트된 동작으로 소개합니다.</p></div><div class="media-slot dark" data-media="conflict-case"><span class="slot-icon">▧</span><div><strong>관리자 화면 · 충돌 결과</strong><p>두 화면에서 동일 주문을 처리했을 때의 결과를 직접 추가할 자리</p><code>assets/admin-conflict.webp</code></div></div></article>
+    </div></section>
+
+    <section id="operation" class="section"><div class="wrap"><div class="section-head"><span class="kicker">04 / OPERATIONS</span><h2>기능을 만든 뒤에도 살폈습니다</h2><p>배포, 확인, 사용자의 피드백이 다시 개선으로 이어지는 과정입니다.</p></div><div class="operation-grid"><article class="op-card"><span>01</span><h3>배포 확인</h3><p>컨테이너 재시작 직후에는 준비 상태가 아닐 수 있어, readiness 엔드포인트가 정상 응답하는지 확인합니다.</p></article><article class="op-card"><span>02</span><h3>원인 조사</h3><p>CloudFront 기록과 애플리케이션 로그, 실제 브라우저 현상을 함께 봅니다. 로그에 오류가 없다는 이유만으로 사용자 불편을 배제하지 않습니다.</p></article><article class="op-card"><span>03</span><h3>운영 위험</h3><p>서버가 한 대인 현재 구조에서는 재시작·교체 시 중단 가능성이 있습니다. 이 위험을 바탕으로 다중 인스턴스 구성을 설계했습니다.</p></article></div><div class="media-slot" data-media="operation"><span class="slot-icon">▣</span><div><strong>운영 근거 자료</strong><p>헬스 체크, 배포 로그, 사용자 제보와 확인 과정 중 공개 가능한 자료</p><code>assets/operation-evidence.webp</code></div></div></div></section>
+
+    <section id="next" class="section plan"><div class="wrap"><div class="section-head"><span class="kicker">05 / NEXT STEP</span><h2>다중 서버 운영을 위한 확장 설계</h2><p>아래 구조는 구현·검증 중인 계획이며, 현재 운영 인프라에 적용된 상태가 아닙니다.</p></div><div class="plan-grid"><div class="plan-card"><span class="badge">현재</span><h3>단일 EC2</h3><p>한 서버가 API와 크리스마스 마켓의 실시간 접속 상태를 담당합니다. 서버 교체 중 서비스가 중단될 수 있습니다.</p></div><div class="plan-card focus"><span class="badge">계획</span><h3>ALB + ASG + Redis</h3><p>두 가용 영역의 앱 서버로 요청을 나누고, 마켓 접속 상태와 요청 제한 정보를 Redis로 공유합니다. 인스턴스 간 상태 전달은 로컬 통합 테스트로 검증했습니다.</p></div></div><p class="plan-note">RDS와 초기 캐시 구성은 별도의 고가용성 개선 대상입니다. 여러 앱 서버만으로 전체 서비스의 모든 단일 장애점이 없어지지는 않습니다.</p><a class="text-link" href="assets/architecture/URLUV-planned-scaling.drawio">편집 가능한 확장 계획 구조도 보기</a><figure class="media-slot has-image"><img src="assets/scaling-architecture.png" alt="URLUV 확장 계획 인프라 구조도"><figcaption>확장 계획 구조 · 아직 미배포</figcaption></figure></div></section>
+
+    <section class="closing wrap"><span class="kicker">WHAT I LEARNED</span><h2>보이는 오류와 보이지 않는 위험을<br>같은 서비스 안에서 살폈습니다.</h2><p>URLUV에서 배운 것은 기능을 완성하는 것만큼 실제 사용 환경에서 결과를 확인하는 일이 중요하다는 점입니다. 확인한 사실과 가설을 구분하고, 아직 적용하지 않은 계획은 적용된 성과처럼 말하지 않겠습니다.</p><div class="closing-actions"><a class="button primary" href="https://urluv.shop/" target="_blank" rel="noopener noreferrer">운영 사이트 보기</a><a class="button subtle" href="#top">맨 위로</a></div></section>
+  </main>
+  <footer><div class="wrap footer-row"><span>URLUV PROJECT PORTFOLIO</span><a href="index.html">← 포트폴리오 홈</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
