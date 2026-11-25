@@ -6,7 +6,7 @@
   <meta name="description" content="백엔드 개발자 오창엽의 포트폴리오. 프로젝트, 기술, 활동, 수상과 자격증을 소개합니다.">
   <meta name="theme-color" content="#f7f8f7">
   <title>오창엽 | 백엔드 개발자 포트폴리오</title>
-  <link rel="stylesheet" href="home.css?v=2">
+  <link rel="stylesheet" href="home.css?v=3">
 </head>
 <body id="top">
   <a class="skip" href="#main">본문으로 이동</a>
@@ -19,16 +19,20 @@
   </header>
 
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> OH CHANGYEOP · BACKEND DEVELOPER</p>
-        <h1 id="hero-title">안녕하세요.<br><em>백엔드 개발자 오창엽</em>입니다.</h1>
-        <p class="hero-lead">API 서버 설계부터 AI 연동, 배포 인프라까지 서비스의 전 과정을 직접 다뤘습니다. 협업과 버전 관리, 실사용자 관점의 검증을 함께 챙기며 실제 사용자에게 닿는 서비스를 만들고 싶습니다.</p>
-        <div class="hero-actions"><a class="button button-dark" href="#projects">프로젝트 보기 <span aria-hidden="true">↘</span></a><a class="button button-light" href="mailto:chyeop.oh@gmail.com">이메일 보내기 <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-points" aria-label="관심 분야"><span>BACKEND</span><span>AI INTEGRATION</span><span>INFRA &amp; OPERATIONS</span></div>
+    <section class="hero-band" aria-labelledby="hero-title"><div class="hero wrap">
+      <div class="hero-identity">
+        <div class="profile-circle"><img src="assets/profile.png" alt="정장을 입은 오창엽의 증명사진" fetchpriority="high"></div>
+        <div class="identity-links" aria-label="프로필 링크"><a href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필">GH</a><a href="https://velog.io/@channi3714/posts" target="_blank" rel="noopener noreferrer" aria-label="Velog 블로그">V</a><a href="mailto:chyeop.oh@gmail.com" aria-label="이메일 보내기">@</a></div>
       </div>
-      <figure class="profile-card"><div class="profile-frame"><img src="assets/profile.png" alt="정장을 입은 오창엽의 증명사진" fetchpriority="high"></div><figcaption><span>OH CHANGYEOP</span><strong>Backend Developer</strong></figcaption></figure>
-    </section>
+      <div class="hero-copy">
+        <p class="eyebrow">OH CHANGYEOP · PORTFOLIO</p>
+        <h1 id="hero-title">오창엽</h1>
+        <p class="hero-role">Backend Developer</p>
+        <p class="hero-keywords">Spring Boot <span>·</span> AI Integration <span>·</span> AWS</p>
+        <p class="hero-lead">API 서버 설계부터 AI 연동, 배포 인프라까지 서비스의 전 과정을 직접 다뤘습니다. 여러 팀 프로젝트를 거치며 협업과 버전 관리, 실사용자 관점의 검증을 함께 챙겼습니다. 실제 사용자에게 닿는 서비스를 만들어 나가고 싶습니다.</p>
+        <div class="hero-actions"><a class="button hero-primary" href="mailto:chyeop.oh@gmail.com">이메일 보내기 ↗</a><a class="button hero-outline" href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button hero-outline" href="https://velog.io/@channi3714/posts" target="_blank" rel="noopener noreferrer">Velog ↗</a></div>
+      </div>
+    </div></section>
 
     <section class="section section-alt" id="about">
       <div class="wrap about-grid">
@@ -42,10 +46,10 @@
     <section class="section" id="skills">
       <div class="wrap"><div class="section-heading"><p class="eyebrow">02 / SKILLS</p><h2>프로젝트에서 사용한 기술</h2><p>여러 팀 프로젝트에서 활용한 기술을 역할별로 묶었습니다.</p></div>
         <div class="skill-grid">
-          <article class="skill-card"><span>01 / BACKEND</span><h3>Java · Spring Boot</h3><p>도메인 API, 인증, JPA 기반 데이터 처리</p></article>
-          <article class="skill-card"><span>02 / AI SERVICE</span><h3>Python · FastAPI</h3><p>AI 서비스 로직 구현과 Gemini API 연동</p></article>
-          <article class="skill-card"><span>03 / DATA</span><h3>MySQL · PostgreSQL</h3><p>서비스 데이터 모델 설계와 파일 저장 흐름</p></article>
-          <article class="skill-card"><span>04 / INFRA &amp; COLLABORATION</span><h3>AWS · Docker · Git</h3><p>EC2 배포, Docker Compose, GitHub Actions와 팀 협업</p></article>
+          <article class="skill-card"><div class="skill-top"><span>01 / BACKEND</span><b>⌘</b></div><h3>서버와 API</h3><p>주문·신고 등 서비스의 핵심 흐름과 인증 API를 구현했습니다.</p><div class="stack-tags"><span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>REST API</span></div></article>
+          <article class="skill-card"><div class="skill-top"><span>02 / AI SERVICE</span><b>✳</b></div><h3>AI 기능 연동</h3><p>AI 요청을 처리하는 서버와 외부 모델 연동 흐름을 만들었습니다.</p><div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Gemini API</span></div></article>
+          <article class="skill-card"><div class="skill-top"><span>03 / DATA</span><b>▤</b></div><h3>데이터와 파일</h3><p>관계형 데이터를 설계하고 사진·영상 저장 흐름을 다뤘습니다.</p><div class="stack-tags"><span>MySQL</span><span>PostgreSQL</span><span>Amazon S3</span></div></article>
+          <article class="skill-card"><div class="skill-top"><span>04 / INFRA &amp; TOOLS</span><b>◇</b></div><h3>배포와 협업</h3><p>컨테이너 기반 환경을 배포하고 팀과 변경 사항을 검증했습니다.</p><div class="stack-tags"><span>AWS EC2</span><span>Docker Compose</span><span>Git</span><span>GitHub Actions</span></div></article>
         </div>
       </div>
     </section>
@@ -85,7 +89,7 @@
       </div><div class="certification-row"><span>CERTIFICATION · 2024.06.21</span><strong>SQLD · SQL 개발자</strong></div>
     </div></section>
 
-    <section class="closing wrap" id="contact"><p class="eyebrow">06 / CONTACT</p><h2>함께 서비스를 만들 이야기를<br>나누고 싶습니다.</h2><p>프로젝트와 협업에 관한 연락은 이메일로 보내주세요.</p><div class="hero-actions"><a class="button button-dark" href="mailto:chyeop.oh@gmail.com">chyeop.oh@gmail.com <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer">GitHub 방문 <span aria-hidden="true">↗</span></a></div></section>
+    <section class="closing wrap" id="contact"><p class="eyebrow">06 / CONTACT</p><h2>함께 서비스를 만들 이야기를<br>나누고 싶습니다.</h2><p>프로젝트와 협업에 관한 연락은 이메일로 보내주세요.</p><div class="hero-actions"><a class="button button-dark" href="mailto:chyeop.oh@gmail.com">chyeop.oh@gmail.com <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/channi3714" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button button-light" href="https://velog.io/@channi3714/posts" target="_blank" rel="noopener noreferrer">Velog ↗</a></div></section>
   </main>
 
   <footer><div class="wrap footer-inner"><span>© 2026 OH CHANGYEOP · BACKEND DEVELOPER</span><a href="#top">맨 위로 ↑</a></div></footer>
