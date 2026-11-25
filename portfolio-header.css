@@ -1,0 +1,10 @@
+/* Shared portfolio navigation used on the project pages. */
+.site-header .header-inner{height:100%;display:flex;align-items:center;gap:32px}
+.site-header .wordmark{font-weight:800;letter-spacing:-.08em;font-size:23px;line-height:1}
+.site-header .wordmark span{color:#e58e69}
+.site-header .header-inner nav{display:flex;gap:29px;margin-left:auto}
+.site-header .header-inner nav a{font-size:13px;font-weight:700;color:#526368}
+.site-header .header-inner nav a:hover,.site-header .header-project:hover{color:var(--teal)}
+.site-header .header-project{font-size:13px;font-weight:800;border:1px solid var(--line);border-radius:6px;padding:8px 13px;white-space:nowrap}
+@media(max-width:900px){.site-header .header-inner nav{gap:16px}}
+@media(max-width:650px){.site-header .header-inner{gap:12px}.site-header .wordmark{font-size:18px}.site-header .header-inner nav{display:none}.site-header .header-project{display:block;margin-left:auto;font-size:11px;padding:6px 10px}}

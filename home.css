@@ -28,8 +28,8 @@
 .skills-heading{text-align:center}
 .skill-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 40px;max-width:1050px}
 .skill-pills>span{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid #cfe0db;border-radius:9px;background:#f9fcfa;color:var(--ink);font:700 13px 'DM Sans','Nanum Gothic',sans-serif;white-space:nowrap}
-.pill-mark{width:25px;height:25px;display:inline-grid;place-items:center;border-radius:6px;background:#e9f2ee;color:var(--teal);font:800 12px 'DM Sans',sans-serif;letter-spacing:-.05em}
-.pill-mark.java{color:#c56542}.pill-mark.spring,.pill-mark.jpa{color:#498a42}.pill-mark.python{color:#326ea3}.pill-mark.fastapi{color:#16876f}.pill-mark.mysql{color:#386a9b}.pill-mark.postgres{color:#4a649e}.pill-mark.docker{color:#2974ad}.pill-mark.aws{color:#bb6a25;font-size:9px}.pill-mark.git{color:#c85d43}
+.skill-logo{width:25px;height:25px;display:block;flex:none;object-fit:contain}
+.skill-logo-wide{width:34px}
 #skills .skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 #skills .skill-card{min-height:205px;padding:27px 27px 24px;background:#fff;box-shadow:none}
 #skills .skill-card:before{display:none}
