@@ -7,7 +7,7 @@
 .deploy-steps li{background:var(--pale);border:1px solid #dceae7;border-radius:12px;padding:21px 18px;min-height:152px}
 .deploy-steps b{display:block;color:var(--teal);font-size:14px;letter-spacing:-.02em;margin-bottom:10px}
 .deploy-steps span{display:block;font-size:13px;line-height:1.65;color:var(--ink);word-break:keep-all}
-.deploy-steps code,.ops-evidence code{font-size:.92em;background:#e6f0ec;padding:2px 4px;border-radius:4px;overflow-wrap:anywhere}
+.deploy-steps code,.ops-evidence code,.ops-columns code{font-size:.92em;background:#e6f0ec;padding:2px 4px;border-radius:4px;overflow-wrap:anywhere}
 .ops-section .ops-evidence{padding:17px 20px;background:#e9f5f0;border-radius:10px;color:#385e58;font-size:14px}
 .ops-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:23px}
 .ops-columns>div{border:1px solid var(--line);border-radius:12px;padding:24px;background:white}
