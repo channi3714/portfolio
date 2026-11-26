@@ -118,3 +118,18 @@
 @media(max-width:1050px){.whale-flow-four,.whale-deploy-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:800px){.whale-problem-grid,.whale-flow-four,.whale-deploy-steps,.whale-flow-detail,.whale-decision-grid,.whale-case-columns,.whale-code-story{grid-template-columns:1fr}}
 @media(max-width:650px){.whale-case{padding:25px}.whale-flow-four li{min-height:0}.whale-deploy-steps li{padding:22px}.whale-decision-grid article,.whale-flow-detail>div{padding:24px}}
+
+.whale-stack-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:23px}
+.whale-stack-summary article{border:1px solid #d4e2dc;border-radius:10px;background:#fff;padding:22px}
+.whale-stack-summary article>span{display:block;margin-bottom:13px;color:var(--teal);font:600 10px 'DM Mono',monospace;letter-spacing:.07em}
+.whale-stack-summary .whale-tags span{padding:6px 9px;font-size:11px}
+.whale-rationale-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.whale-rationale-grid article{border:1px solid var(--line);border-radius:10px;background:#f8faf9;padding:25px}
+.whale-rationale-grid h3{font-size:19px;line-height:1.4;letter-spacing:-.045em;margin:11px 0 8px}
+.whale-rationale-grid p{font-size:13px;color:var(--muted);line-height:1.8;margin:0;word-break:keep-all}
+.whale-stack-note{margin:17px 0 0;color:var(--muted);font-size:12px;line-height:1.7;word-break:keep-all}
+.whale-result-summary{display:flex;flex-direction:column;justify-content:center;background:#fff}
+.whale-result-summary p{color:var(--muted);font-size:14px;line-height:1.8;word-break:keep-all}
+.whale-result-summary a{margin-top:14px;color:var(--teal);font-size:13px;font-weight:700}
+@media(max-width:800px){.whale-stack-summary,.whale-rationale-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.whale-stack-summary article,.whale-rationale-grid article{padding:21px}}
