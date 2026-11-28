@@ -163,3 +163,10 @@
 .whale-scale-steps p{margin:0;color:var(--muted);font-size:13px;line-height:1.75;word-break:keep-all}
 @media(max-width:850px){.whale-target-flow{grid-template-columns:1fr;gap:10px}.whale-target-flow>i{transform:rotate(90deg);text-align:center}.whale-target-api{grid-column:auto;grid-template-columns:1fr}.whale-api-route{writing-mode:initial;transform:none}.whale-scale-steps{grid-template-columns:1fr}}
 @media(max-width:650px){.whale-screen-grid{grid-template-columns:1fr}.whale-screen-placeholder{min-height:195px}.whale-scale-current,.whale-scale-target{padding:22px}.whale-scale-flow{gap:8px}.whale-scale-flow span{padding:10px;font-size:12px}}
+
+
+/* AWS architecture diagrams */
+.whale-diagram-figure{margin:30px 0 38px;padding:clamp(10px,2vw,22px);border:1px solid #d3e0dd;border-radius:18px;background:#fff;box-shadow:0 14px 36px #163a3410}
+.whale-diagram-figure img{display:block;width:100%;height:auto;border-radius:10px}
+.whale-diagram-figure figcaption{margin-top:13px;color:var(--muted);font-size:13px;line-height:1.6}
+@media(max-width:650px){.whale-diagram-figure{margin:22px 0 30px;padding:8px;border-radius:12px}.whale-diagram-figure figcaption{padding:0 4px;font-size:12px}}

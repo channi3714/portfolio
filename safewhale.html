@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f8f7">
   <title>안전고래 | 오창엽 포트폴리오</title>
   <link rel="stylesheet" href="home.css?v=7">
-  <link rel="stylesheet" href="safewhale.css?v=3">
+  <link rel="stylesheet" href="safewhale.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">본문으로 이동</a>
@@ -48,7 +48,7 @@ GET  /api/v1/admin/reports/{id}/report-file</code></pre></article></div>
         <figure><div class="whale-screen-placeholder"><strong>처리 결과 · 신고서</strong><code>assets/safewhale/screens/report-result.png</code></div><figcaption>조치 완료 결과 또는 생성된 HWP 화면</figcaption></figure>
       </div></div></section>
 
-    <section id="architecture" class="whale-section whale-section-alt"><div class="wrap"><div class="whale-heading"><p class="eyebrow">02 / ARCHITECTURE</p><h2>현재 구성: Vercel과 단일 EC2</h2><p>프론트엔드는 Vercel에서 제공하고, API·데이터베이스·AI 서버는 한 대의 EC2에서 Docker Compose로 실행합니다. 관리형 데이터베이스와 CDN 없이 EC2 한 대에서 애플리케이션과 PostgreSQL을 함께 운영합니다.</p></div><div class="whale-architecture" role="img" aria-label="Vercel 프론트엔드에서 EC2의 Nginx를 거쳐 Spring Boot API로 요청하고, API는 PostgreSQL과 팀원 개발 FastAPI AI 서버에 연결되는 구조"><div class="arch-node arch-client"><small>사용자 브라우저</small><strong>Vercel 프론트엔드</strong><span>신고 · 관리자 화면</span></div><span class="arch-arrow" aria-hidden="true">→</span><div class="arch-boundary"><span class="arch-boundary-label">AWS EC2 · Docker Compose</span><div class="arch-node arch-entry"><small>외부 진입점 · HTTPS</small><strong>Nginx</strong></div><span class="arch-arrow vertical" aria-hidden="true">↓</span><div class="arch-node arch-backend"><small>백엔드 · 배포</small><strong>Spring Boot API</strong><span>인증 · 신고 · 관리자 처리 · AI 연동</span></div><div class="arch-branches"><div class="arch-node"><small>데이터 저장</small><strong>PostgreSQL</strong></div><div class="arch-node"><small>팀원 개발</small><strong>FastAPI AI 서버</strong></div></div></div></div><div class="whale-flow-detail"><div><span class="eyebrow">REQUEST PATH</span><h3>외부 API와 내부 서비스 연결</h3><p>브라우저 요청은 HTTPS로 Nginx에 도착합니다. API가 데이터베이스와 AI 서버에 Docker 내부 주소로 연결하며, DB와 AI 컨테이너 포트는 직접 공개하지 않습니다.</p></div><div><span class="eyebrow">PERSISTENCE</span><h3>컨테이너 교체 후 데이터 유지</h3><p>PostgreSQL 데이터와 업로드 파일은 각각 Docker 볼륨에 둡니다. 앱 컨테이너를 새 이미지로 교체해도 신고 데이터와 파일이 컨테이너와 함께 지워지지 않도록 했습니다.</p></div></div>
+    <section id="architecture" class="whale-section whale-section-alt"><div class="wrap"><div class="whale-heading"><p class="eyebrow">02 / ARCHITECTURE</p><h2>현재 구성: Vercel과 단일 EC2</h2><p>프론트엔드는 Vercel에서 제공하고, API·데이터베이스·AI 서버는 한 대의 EC2에서 Docker Compose로 실행합니다. 관리형 데이터베이스와 CDN 없이 EC2 한 대에서 애플리케이션과 PostgreSQL을 함께 운영합니다.</p></div><figure class="whale-diagram-figure"><img src="assets/architecture/safewhale/SafeWhale-current-architecture.svg" alt="현재 배포 구조: Vercel 프론트엔드가 단일 EC2의 Nginx를 통해 Spring Boot API와 PostgreSQL, FastAPI AI 서버에 연결됩니다."><figcaption>현재 배포 구조 · Vercel 프론트엔드 + 단일 EC2 · Docker Compose</figcaption></figure><div class="whale-flow-detail"><div><span class="eyebrow">REQUEST PATH</span><h3>외부 API와 내부 서비스 연결</h3><p>브라우저 요청은 HTTPS로 Nginx에 도착합니다. API가 데이터베이스와 AI 서버에 Docker 내부 주소로 연결하며, DB와 AI 컨테이너 포트는 직접 공개하지 않습니다.</p></div><div><span class="eyebrow">PERSISTENCE</span><h3>컨테이너 교체 후 데이터 유지</h3><p>PostgreSQL 데이터와 업로드 파일은 각각 Docker 볼륨에 둡니다. 앱 컨테이너를 새 이미지로 교체해도 신고 데이터와 파일이 컨테이너와 함께 지워지지 않도록 했습니다.</p></div></div>
 
       <div class="whale-heading"><p class="eyebrow">TECHNOLOGY CHOICES</p><h2>기술 스택과 선택 근거</h2><p>각 기술은 구현 역할과 시연 환경에 맞춰 선택했습니다.</p></div>
       <div class="whale-stack-summary">
@@ -96,16 +96,7 @@ V16__backfill_verified_campus_building_coordinates.sql</code></pre></div></artic
       <div class="whale-heading"><p class="eyebrow">05 / NEXT STEP</p><h2>시연용 단일 서버에서<br>확장 가능한 구조로</h2><p>현재 운영 구성의 단일 장애 지점과 로컬 저장소 의존을 줄이는 방향으로 확장안을 설계했습니다. 아래 목표 구조는 계획이며, 실제 배포 환경에 적용된 상태는 아닙니다.</p></div>
       <div class="whale-scale-current"><span class="eyebrow">CURRENT · DEPLOYED</span><h3>Vercel 프론트엔드 + 단일 EC2</h3><p>정적 화면은 Vercel에서 제공하고, EC2 한 대에서 Nginx·Spring Boot·PostgreSQL·FastAPI를 Docker Compose로 실행합니다. 현재는 관리형 RDS와 CloudFront를 사용하지 않으며, 단일 EC2 중단이나 교체가 API와 데이터 저장에 영향을 줄 수 있습니다.</p><div class="whale-scale-flow"><span>사용자</span><b>→</b><span>Vercel</span><b>→</b><span>EC2 · Nginx</span><b>→</b><span>Spring Boot · PostgreSQL · FastAPI</span></div></div>
       <div class="whale-scale-target"><span class="eyebrow">PLANNED · TARGET</span><h3>CloudFront + ALB·ASG + RDS</h3><p>프론트 정적 파일과 업로드 파일은 S3에 두고 CloudFront로 전달합니다. <code>/api/*</code> 요청은 ALB로 보내고, 두 가용 영역의 Auto Scaling 그룹이 Spring Boot와 내부 FastAPI 요청을 처리합니다. PostgreSQL은 프라이빗 서브넷의 RDS로 분리해 앱 인스턴스 교체와 데이터 보존을 분리합니다.</p>
-        <div class="whale-target-flow" aria-label="계획 중인 목표 배포 구조">
-          <div class="whale-target-node"><small>CLIENT</small><strong>사용자</strong><span>웹 · 신고</span></div><i>→</i>
-          <div class="whale-target-node"><small>EDGE</small><strong>CloudFront</strong><span>정적·미디어 캐시</span></div><i>→</i>
-          <div class="whale-target-node"><small>STATIC ORIGIN</small><strong>S3</strong><span>프론트 · 업로드 파일</span></div>
-          <div class="whale-target-api"><span class="whale-api-route">/api/*</span><i>↓</i>
-            <div class="whale-target-node"><small>LOAD BALANCER</small><strong>ALB</strong><span>헬스 체크 · 요청 분산</span></div><i>→</i>
-            <div class="whale-target-asg"><small>PRIVATE APP SUBNET · 2 AZ</small><strong>Auto Scaling Group</strong><div><span>EC2 · Spring Boot</span><span>내부 FastAPI</span></div></div><i>→</i>
-            <div class="whale-target-node"><small>PRIVATE DATA SUBNET</small><strong>RDS PostgreSQL</strong><span>신고 · 사용자 · 이력</span></div>
-          </div>
-        </div>
+        <figure class="whale-diagram-figure"><img src="assets/architecture/safewhale/SafeWhale-planned-scaling.svg" alt="확장 목표 구조: CloudFront와 S3, ALB, 두 가용 영역의 Auto Scaling EC2 앱 서버, 프라이빗 RDS PostgreSQL로 구성됩니다."><figcaption>확장 목표 구조 · 설계안이며 실제 배포 전</figcaption></figure>
       </div>
       <div class="whale-scale-steps"><article><span>01</span><h4>데이터와 파일 분리</h4><p>PostgreSQL과 업로드 파일을 EC2 로컬 저장소에서 RDS·S3로 옮기고 백업·복구를 확인합니다.</p></article><article><span>02</span><h4>앱을 무상태로 정리</h4><p>인스턴스 로컬 파일과 메모리에 의존하는 값을 외부 저장소로 옮겨 여러 앱 서버가 같은 요청을 처리할 수 있게 합니다.</p></article><article><span>03</span><h4>트래픽 분산과 정적 전송</h4><p>ALB·ASG로 앱 서버를 확장하고, CloudFront가 S3의 프론트·미디어 파일을 전달하도록 전환합니다.</p></article></div>
     </div></section>
